@@ -1,3 +1,5 @@
+package com.aryan.memory_management;
+
 public class MemoryManagement_01 {
     public static void main(String[] args) {
         String s = "Hi";
@@ -11,8 +13,8 @@ public class MemoryManagement_01 {
         }
         System.out.println();
         System.out.println(s);
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
+        for (int j : arr) {
+            System.out.print(j + " ");
         }
 
     }
