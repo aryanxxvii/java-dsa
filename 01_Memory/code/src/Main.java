@@ -1,6 +1,4 @@
-package com.aryan.memory_management;
-
-public class MemoryManagement_01 {
+public class Main {
     public static void main(String[] args) {
         String s = "Hi";
         int[] arr = {1, 2, 3};
