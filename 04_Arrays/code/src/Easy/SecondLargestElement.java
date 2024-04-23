@@ -1,4 +1,6 @@
-public class EASY_SecondLargestElement {
+package Easy;
+
+public class SecondLargestElement {
     public static void main(String[] args) {
         int[] arr = {1, 11, 7, 8, 2, 3, 5, 6, 8};
         int largest = arr[0];

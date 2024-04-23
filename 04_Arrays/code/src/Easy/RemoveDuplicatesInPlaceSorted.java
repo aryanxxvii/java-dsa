@@ -1,4 +1,6 @@
-public class EASY_RemoveDuplicatesInPlaceSorted {
+package Easy;
+
+public class RemoveDuplicatesInPlaceSorted {
     public static void main(String[] args) {
         // Note: Can put anything in remaining places
         int[] arr = {1, 1, 1, 2, 2, 2, 3, 3};

@@ -1,4 +1,6 @@
-public class EASY_CheckIfArrayIsSorted {
+package Easy;
+
+public class CheckIfSorted {
     public static void main(String[] args) {
         int[] arr1 = {1, 2, 3, 4, 4, 5};
         int[] arr2 = {3, 5, 2, 4, 2};
