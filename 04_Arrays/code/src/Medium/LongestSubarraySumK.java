@@ -45,8 +45,12 @@ public class LongestSubarraySumK {
             if (map.containsKey(sum - K)) {
                 int prevIndex = map.get(sum - K);
 
-                // QUESTION: Why 'i - prevIndex' in original? Why no +1?
-                max = Math.max(max, i-prevIndex + 1);
+                // QUESTION: Why 'i - prevIndex' in original? Why no +1? => DO DRY RUN FOR ANS!
+                // Bcs, we need to count from prevIndex's next index
+                // Eg: K = 10, [0...2] (index) => sum = 4, [3...7] (index) => sum = 14
+                // PrevIndex = 2, i = 7
+                // Actual Length = 7 - 2 = 5
+                max = Math.max(max, i-prevIndex);
             } else {
                 // Only add if NOT already in map, to get the farthest value
                 map.put(sum, i);
@@ -82,6 +86,10 @@ public class LongestSubarraySumK {
             }
 
             if (sum == K) {
+                // Why +1 here?
+                // Eg: {1, 2, 3}, K = 3
+                // i = 0, j = 1 for sum == K
+                // j - i + 1 = 2 = actual length
                 max = Math.max(j - i + 1, max);
             }
 
@@ -89,9 +97,6 @@ public class LongestSubarraySumK {
             // So, we can move 'j' to right
             j++;
         }
-
         return max;
-
-
     }
 }
