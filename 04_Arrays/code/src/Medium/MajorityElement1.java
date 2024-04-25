@@ -86,6 +86,10 @@ public class MajorityElement1 {
     }
 
     public static int trick(int[] arr) {
+        // Sort the array
+        // Find the middle element (majority will always also be in the middle)
+        // Verify it
+
         Arrays.sort(arr);
         int candidate = arr[arr.length/2];
         int count = 0;
