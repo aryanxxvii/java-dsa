@@ -73,6 +73,7 @@ public class MajorityElement1 {
             for (int i : arr) {
                 if (i == taken) {
                     check++;
+                    
                 }
             }
             if (check > arr.length/2) {
