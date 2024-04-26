@@ -15,15 +15,10 @@ public class Leaders {
         ArrayList<Integer> ans = new ArrayList<>();
         int current_max = Integer.MIN_VALUE;
         for (int i = arr.length-1; i >= 0; i--) {
-            if (i == arr.length-1) {
-                current_max = arr[i];
+            if (arr[i] > current_max || i == arr.length-1) {
                 ans.add(arr[i]);
-            } else {
-                if (arr[i] > current_max) {
-                    current_max = arr[i];
-                    ans.add(arr[i]);
-                }
             }
+            current_max = Math.max(current_max, arr[i]);
         }
 
         for (int i : ans.reversed()) {
