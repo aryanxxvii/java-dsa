@@ -27,14 +27,24 @@ public class SpiralTraversal {
                 System.out.print(arr[i][right] + " ");
             }
             right--;
-            for (int i = right; i >= left; i--) {
-                System.out.print(arr[bottom][i] + " ");
+
+            // We need to check if top <= bottom before this loop
+            // To cover {1, 2, 3, 4} etc. single array
+            // top will move beneath bottom in 1-D array
+            // So it will print 1, 2, 3, 4, 3, 2, 1
+            // Left to Right, then again Right to Left
+            if (top <= bottom) {
+                for (int i = right; i >= left; i--) {
+                    System.out.print(arr[bottom][i] + " ");
+                }
+                bottom--;
             }
-            bottom--;
-            for (int i = bottom; i >= top; i--) {
-                System.out.print(arr[i][left] +  " ");
+            if (left <= right) {
+                for (int i = bottom; i >= top; i--) {
+                    System.out.print(arr[i][left] +  " ");
+                }
+                left++;
             }
-            left++;
         }
     }
 }
