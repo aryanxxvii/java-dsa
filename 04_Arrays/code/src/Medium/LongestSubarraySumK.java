@@ -51,7 +51,8 @@ public class LongestSubarraySumK {
                 // PrevIndex = 2, i = 7
                 // Actual Length = 7 - 2 = 5
                 max = Math.max(max, i-prevIndex);
-            } else {
+            }
+            if (!map.containsKey(sum)) {
                 // Only add if NOT already in map, to get the farthest value
                 map.put(sum, i);
             }
