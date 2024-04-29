@@ -2,10 +2,8 @@
 
 ## 1. Easy
 
----
 ## 2. Medium
 
----
 ## 3. Hard
 
 1. [Majority Element 2](./Hard/MajorityElement2.java)
