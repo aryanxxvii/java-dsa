@@ -8,5 +8,6 @@
 ---
 ## 3. Hard
 
-- https://github.com/aryanxxvii/java-dsa/blob/3771728c583d94e0b95c3e914b64fb6a3fef47a3/04_Arrays/code/src/Hard/ThreeSum.java
-
+1. [Majority Element 2](https://github.com/aryanxxvii/java-dsa/blob/main/04_Arrays/code/src/Hard/MajorityElement2.java)
+2. [Pascal Triangle](https://github.com/aryanxxvii/java-dsa/blob/main/04_Arrays/code/src/Hard/PascalTriangle.java)
+3. [Three Sum](./Hard/ThreeSum.java)
