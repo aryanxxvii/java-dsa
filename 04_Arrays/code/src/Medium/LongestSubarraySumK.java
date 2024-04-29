@@ -53,7 +53,7 @@ public class LongestSubarraySumK {
                 max = Math.max(max, i-prevIndex);
             }
             if (!map.containsKey(sum)) {
-                // Only add if NOT already in map, to get the farthest value
+                // Only add if iNOT already in map, to get the farthest value
                 map.put(sum, i);
             }
         }
