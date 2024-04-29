@@ -5,8 +5,8 @@ import java.util.Arrays;
 
 public class FourSum {
     public static void main(String[] args) {
-        int[] arr = {1,0,-1,0,-2,2};
-        int K = 0;
+        int[] arr = {7, 7, 2, 6, 7, 3, -8, -1};
+        int K = 4;
 
         ArrayList<ArrayList<Integer>> ans = optimal(arr, K);
         System.out.println(ans);
@@ -28,9 +28,9 @@ public class FourSum {
         Arrays.sort(arr);
 
         for (int i = 0; i < arr.length; i++) {
-            if (i != 0 && arr[i] == arr[i-1]) continue;
-            for (int j = i + 1; j < arr.length - 1; j++) {
-                if (j != 0 && arr[j] == arr[j-1]) continue;
+            if (i > 0 && arr[i] == arr[i-1]) continue;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (j > i + 1 && arr[j] == arr[j-1]) continue;
 
                 int x = j + 1;
                 int y = arr.length - 1;
@@ -47,18 +47,15 @@ public class FourSum {
                         y--;
 
                         while (x < y && arr[x] == arr[x-1]) x++;
-                        while (x < y && arr[y] == arr[y-1]) y++;
-                    } else if (sum > 0) {
+                        while (x < y && arr[y] == arr[y+1]) y--;
+                    } else if (sum > K) {
                         y--;
-                    } else if (sum < 0) {
+                    } else if (sum < K) {
                         x++;
                     }
-
                 }
-
             }
         }
-
         return ans;
 
     }
