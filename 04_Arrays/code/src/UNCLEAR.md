@@ -3,6 +3,7 @@
 ## 1. Easy
 
 ## 2. Medium
+1. [Next Permutation](./Medium/NextPermutation.java)
 
 ## 3. Hard
 
