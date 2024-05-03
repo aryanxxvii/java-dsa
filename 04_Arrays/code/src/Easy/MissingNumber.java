@@ -9,6 +9,8 @@ public class MissingNumber {
     }
 
     public static int summationApproach(int[] arr) {
+        // Compare actual sum with theoretical sum
+
         int n = arr.length + 1; // +1 because one number is missing
         int desiredSum = (n*(n+1))/2;
         int arraySum = 0;
@@ -21,6 +23,9 @@ public class MissingNumber {
     }
 
     public static int xorApproach(int[] arr) {
+        // Actual XOR ^ Theoretical XOR = Missing Number
+        // Because only missing number will not repeat
+
         int desiredXor = 0;
         int arrayXor = 0;
 
@@ -34,6 +39,8 @@ public class MissingNumber {
     }
 
     public static int iterativeApproach(int[] arr) {
+        // If array is sorted, check if next element is +1 of previous element
+
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] != (i+1)) {
                 return (i+1);

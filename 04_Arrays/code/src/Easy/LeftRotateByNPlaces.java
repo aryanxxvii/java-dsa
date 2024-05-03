@@ -30,9 +30,6 @@ public class LeftRotateByNPlaces {
 
         // Reverse whole array
         reverse(arr, 0, arr.length-1);
-
-
-
     }
 
 

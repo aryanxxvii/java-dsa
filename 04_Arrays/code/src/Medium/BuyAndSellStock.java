@@ -6,8 +6,6 @@ public class BuyAndSellStock {
         int[] arr2 = {7,6,4,3,1};
         System.out.println(optimal(arr));
         System.out.println(optimal(arr2));
-
-
     }
 
     public static int optimal(int[] arr) {

@@ -1,10 +1,11 @@
 package Easy;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class UnionOfTwoSorted {
     public static void main(String[] args) {
+        // Two-pointer approach
+
         int[] arr1 = {1,2,3,4,5,6,7,8,9,10};
         int[] arr2 = {2,3,4,4,5,11,12};
 

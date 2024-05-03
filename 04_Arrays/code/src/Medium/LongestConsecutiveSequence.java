@@ -1,14 +1,12 @@
 package Medium;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 
 public class LongestConsecutiveSequence {
 
     public static void main(String[] args) {
-        int[] arr = {};
+        int[] arr = {3, 8, 5, 7, 6};
         // Output: 4 => 5, 6, 7, 8
 
         System.out.println(better(arr));
@@ -17,7 +15,7 @@ public class LongestConsecutiveSequence {
 
     public static int better(int[] arr) {
         // Sort the array: NlogN
-        // Search for consecutive subsequence: N
+        // Search for consecutive subarray (not subsequence): N
 
         Arrays.sort(arr);
 
@@ -68,13 +66,6 @@ public class LongestConsecutiveSequence {
 
             }
         }
-
-
-
-
-
-
-
 
         return longest;
     }
