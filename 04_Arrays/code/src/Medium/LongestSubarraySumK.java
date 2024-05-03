@@ -32,14 +32,14 @@ public class LongestSubarraySumK {
         // Eg: K = 2, 6 exists in hashmap => find 4 in hashmap => get length
 
         HashMap<Integer, Integer> map = new HashMap<>();
-                int sum = 0;
-                int max = 0;
+        int sum = 0;
+        int max = 0;
 
-                for (int i = 0; i < arr.length; i++) {
-                    sum += arr[i];
-                    if (sum == K) {
-                        // i + 1, because we need length, starting from 0 index
-                        max = Math.max(max, i+1);
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+            if (sum == K) {
+                // i + 1, because we need length, starting from 0 index
+                max = Math.max(max, i+1);
             }
 
             if (map.containsKey(sum - K)) {
@@ -53,7 +53,7 @@ public class LongestSubarraySumK {
                 max = Math.max(max, i-prevIndex);
             }
             if (!map.containsKey(sum)) {
-                // Only add if iNOT already in map, to get the farthest value
+                // Only add if NOT already in map, to get the farthest value
                 map.put(sum, i);
             }
         }

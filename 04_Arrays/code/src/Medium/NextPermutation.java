@@ -12,6 +12,7 @@ public class NextPermutation {
         List<Integer> ans = nextPermutation(N, arr);
         System.out.println(ans);
     }
+
     static List<Integer> nextPermutation(int N, int[] arr){
         // Find pivot
         int pivotIndex = findPivotIndex(arr);
