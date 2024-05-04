@@ -5,7 +5,7 @@ public class Video01_Introduction {
 
         -> Recursion:    Function calling itself
         -> Base Condition:   Condition where recursion will stop making new calls
-                            Without Base Condition => stack overflow
+                             Without Base Condition => stack overflow
         -> Recurrence Relation: Recursion in the form of a formula. Eg. Fib(N) = Fib(N-1) + Fib(N-2)
         - Can convert any recursion solution into iteration and vice versa
         - Applications in Dynamic Programming
