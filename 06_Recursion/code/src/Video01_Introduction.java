@@ -1,4 +1,5 @@
 public class Video01_Introduction {
+
     /*
         ===== INTRODUCTION TO RECURSION =====
 
@@ -16,7 +17,6 @@ public class Video01_Introduction {
         - Make sure to return the result of the function call of the return type
 
      */
-
 
     public static void main(String[] args) {
         System.out.println(nthFibonacciNumber(6));
