@@ -1,4 +1,4 @@
-public class Video01_Introduction {
+public class _01_Introduction {
 
     /*
         ===== INTRODUCTION TO RECURSION =====
