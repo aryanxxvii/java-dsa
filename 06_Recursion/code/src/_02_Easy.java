@@ -7,7 +7,7 @@ public class _02_Easy {
 //        System.out.println(sumNto1(10));
 //        System.out.println(sumOfDigits(123));
 //        System.out.println(reverseNumber(123, 0));
-        System.out.println(countZeros(30204, 0));
+        System.out.println(countZeros(300402, 0));
     }
 
     public static void printNto1(int n) {
@@ -84,8 +84,15 @@ public class _02_Easy {
     }
 
     public static int countZeros(int n, int c) {
+
+        // Will work is n is given as 0 initially
+        if (n == 0) {
+            return 1;
+        }
+
         int digit = n % 10;
         n = n / 10;
+
         if (n == 0) {
             return c;
         }
