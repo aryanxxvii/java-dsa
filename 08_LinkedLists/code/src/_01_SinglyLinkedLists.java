@@ -1,4 +1,5 @@
 public class _01_SinglyLinkedLists {
+
     /*
 
         ================== INITIALIZATIONS ==================
@@ -33,6 +34,14 @@ public class _01_SinglyLinkedLists {
         ================== QUESTIONS ==================
 
      */
+
+    // TODO: Merge Sort
+    // TODO: Bubble Sort
+    // TODO: Reverse Linked-list between 2 nodes
+    // TODO: Check Palindrome
+    // TODO: Reorder Linked List
+    // TODO: Reverse in K-Group
+    // TODO: Rotate List
 
     // Insert Recursively
     public void insertRec(int value, int index, Node prev) {
@@ -186,11 +195,8 @@ public class _01_SinglyLinkedLists {
             fast = findSquare(findSquare(fast));
         } while (slow != fast);
 
-        if (slow == 1) {
-            return true;
-        }
+        return slow == 1;
     }
-    // HELPER for Happy Number
     private int findSquare(int n) {
         int ans = 0;
         while (n > 0) {
@@ -198,15 +204,17 @@ public class _01_SinglyLinkedLists {
             ans += lastDigit*lastDigit;
             n = n / 10;
         }
+
+        return ans;
     }
 
     // Middle of Linked List
-    public Node findMiddle() {
+    public Node findMiddle(Node start) {
         // Make speed of fast 2x of slow
         // By the time fast reaches end, slow would have reached middle
 
-        Node slow = head;
-        Node fast = head;
+        Node slow = start;
+        Node fast = start;
 
         while (fast != null && fast.next != null) {
             slow = slow.next;
@@ -216,14 +224,27 @@ public class _01_SinglyLinkedLists {
         return slow;
     }
 
-    // TODO: Merge sort linked list
+    // Recursive Reversing Linked List
+    public void reverseRec(Node node) {
+        if (node == tail) {
+            head = tail;
+            return;
+        }
 
-    // TODO: Bubble sort linked list
-
-    // TODO: Recursive Reversing Linked List
+        reverseRec(node.next);
+        // point tail to prev element
+        tail.next = node;
+        // move tail to prev element
+        tail = node;
+        // remove next of prev element
+        tail.next = null;
+    }
 
     // Iterative Reversing Linked List
     public void reverseList() {
+        // Take 3 pointers, prev, pres, next
+        // Use them to reverse 'pres'
+
         if (size < 2) {
             return;
         }
@@ -244,9 +265,22 @@ public class _01_SinglyLinkedLists {
         head = prev;
     }
 
+    // Check if palindromic linked list
+    public void checkPalindrome() {
+        // Find middle element
+        // Reverse from middle to tail
+        // Check from head -> middle && middle -> end
+        // After checking, reverse it back
+        // ! Requires: Reverse Between Nodes
+    }
 
+    // Reorder Linked List
+    public void reorder() {
+        //  GIVEN:      1 -> 2 -> 3 -> 4 -> 5
+        //  ANSWER:     1 -> 5 -> 2 -> 4 -> 3
 
-
+        // Find middle element and reverse from middle to tail
+    }
 
 
 

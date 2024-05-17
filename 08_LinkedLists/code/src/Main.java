@@ -9,7 +9,7 @@ public class Main {
         list.insertFirst(0);
         list.displayAll();
 //        list.insertRec(9, 0, null);
-        list.removeDuplicates();
+//        list.removeDuplicatesSorted();
         list.displayAll();
 
 
