@@ -10,10 +10,10 @@
 
 ### Todo
 
--[ ] Merge Sort
--[ ]  Bubble Sort
--[ ]  Reverse Linked-list between 2 nodes
--[ ]  Check Palindrome
--[ ]  Reorder Linked List
--[ ]  Reverse in K-Group
--[ ]  Rotate List
+1. Merge Sort
+2. Bubble Sort
+3. Reverse Linked-list between 2 nodes
+4. Check Palindrome
+5. Reorder Linked List
+6. Reverse in K-Group
+7. Rotate List
