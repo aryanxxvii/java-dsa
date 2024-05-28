@@ -33,7 +33,8 @@ public class Main {
 //        list.insertFirst(9);
 //        list.displayAll();
 //        list.deleteFirst();
-//        list.displayAll();
+//
+        
 
     }
 }

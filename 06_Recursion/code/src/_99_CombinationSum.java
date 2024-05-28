@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class _99_CombinationSum {
     /*
@@ -15,43 +13,43 @@ public class _99_CombinationSum {
      */
 
     public static void main(String[] args) {
-        int[] arr = { 1, 2, 3, 3, 5 };
-        int k = 7;
-
-        List<List<Integer>> ans = CombinationSum2(arr, arr.length, k);
+        int[] a = {7, 2, 6, 5};
+        ArrayList<Integer> arr = new ArrayList<>();
+        for (int i : a) {
+            arr.add(i);
+        }
+        int k = 16;
+        ArrayList<ArrayList<Integer>> ans = combinationSum(arr, k);
         System.out.println(ans);
-
     }
 
-
-    public static List<List<Integer>> CombinationSum2(int[] arr, int n, int k) {
-        // Code Here
-        List<List<Integer>> ans = new ArrayList<>();
-        List<Integer> takenElements = new ArrayList<>();
-
-        compute(ans, arr, k, takenElements, 0);
-
+    static ArrayList<ArrayList<Integer>> combinationSum(ArrayList<Integer> A, int B)
+    {
+        // add your code here
+        ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
+        Collections.sort(A);
+        find(A, B, 0, 0, new ArrayList <>(), ans);
         return ans;
     }
 
-    public static void compute(List<List<Integer>> ans, int[] arr, int k, List<Integer> takenElements, int sum) {
-
-        if (sum == k) {
-            List<Integer> temp = new ArrayList<>(takenElements);
-            if (!ans.contains(temp)) {
-                ans.add(temp);
+    public static void find(ArrayList<Integer> arr, int k, int index, int sum, ArrayList<Integer> total, ArrayList<ArrayList<Integer>> ans) {
+        if (index == arr.size() || sum > k) {
+            if (sum == k) {
+                Collections.sort(total);
+                if (!ans.contains(total)) ans.add(new ArrayList<>(total));
             }
-        }
-
-        if (arr.length == 0) {
             return;
         }
 
-        int toAdd = arr[0];
-        takenElements.add(toAdd);
-        compute(ans, Arrays.copyOfRange(arr, 1, arr.length), k, takenElements , sum+toAdd);
-
-        takenElements.remove(takenElements.size()-1);
-        compute(ans, Arrays.copyOfRange(arr, 1, arr.length), k, takenElements, sum);
+        // Take
+        total.add(arr.get(index));
+        // Don't move forward
+        find(arr, k, index, sum + arr.get(index), total, ans);
+        // Don't take
+        total.remove(total.size() - 1);
+        // Move forward
+        find(arr, k, index+1, sum, total, ans);
     }
+
+
 }

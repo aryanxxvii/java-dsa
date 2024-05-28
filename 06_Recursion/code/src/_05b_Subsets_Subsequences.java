@@ -2,9 +2,8 @@ import java.util.ArrayList;
 
 public class _05b_Subsets_Subsequences {
     public static void main(String[] args) {
-//        subsequences("abcd", "");
+        subsequences3("abcd", "");
     }
-
 
     public static void subsequences(String givenStr, String newStr) {
         // To print all subsequences, each element has 2 options: take, and not take
@@ -38,6 +37,20 @@ public class _05b_Subsets_Subsequences {
         return combined;
     }
 
+
+    public static void subsequences3(String givenStr, String newStr) {
+
+            if (givenStr.length() == 0) {
+                System.out.println(newStr);
+                return;
+            }
+
+            // don't add char
+            subsequences3(givenStr.substring(1), newStr);
+            // add char
+            char toAdd = givenStr.charAt(0);
+            subsequences3(givenStr.substring(1), newStr + toAdd);
+    }
 
 }
 

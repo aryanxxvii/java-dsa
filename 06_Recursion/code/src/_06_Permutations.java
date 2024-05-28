@@ -9,7 +9,7 @@ public class _06_Permutations {
         3. _a_b_/c => can add c at any of the 3 _ positions
 
         To Note:
-            - After each layer, the choices and thereby the following recursive calls increase (len(left_string) + 1)
+            - After each layer, the choices, and thereby, the following recursive calls increase (len(left_string) + 1)
             - Can use simple for-loop to make recursion calls
      */
 
