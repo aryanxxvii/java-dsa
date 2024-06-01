@@ -6,6 +6,7 @@
 ## 2. Medium
 1. [Next Permutation](./Medium/NextPermutation.java)
 2. [Count Subarray Sum Equals K](./Medium/CountSubarraySumK.java)
+3. [Find K Closest Elements](./Medium/KClosestElements.java)
 
 ## 3. Hard
 1. [Majority Element 2](./Hard/MajorityElement2.java)
