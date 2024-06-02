@@ -32,6 +32,7 @@ public class NextPermutation {
             arr[indexNextGreatest] = temp;
 
             // sort all to right of pivot
+            // can reverse right half too, because we chose last pivot, so all values to right are already sorted
             Arrays.sort(arr, pivotIndex + 1, arr.length);
 
         }
