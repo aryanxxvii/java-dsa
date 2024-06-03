@@ -6,7 +6,7 @@ import java.util.HashSet;
 public class _99_Permutations {
 
     public static void main(String[] args) {
-        int[] a = {1, 2, 3, 4};
+        int[] a = {1, 2, 1};
         ArrayList<Integer> arr = new ArrayList<>();
         for (int i : a) {
             arr.add(i);
@@ -17,35 +17,28 @@ public class _99_Permutations {
     }
 
     public static ArrayList<ArrayList<Integer>> uniquePerms(ArrayList<Integer> arr , int n) {
-        // code here
         ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
-        find(0, n, arr, new Integer[n], new HashSet<ArrayList<Integer>>(), ans);
+        boolean[] used = new boolean[n];
+        Collections.sort(arr);  // Ensure the initial array is sorted
+        find(arr, new ArrayList<>(), used, ans);
         return ans;
     }
 
-    public static void find(int index, int n, ArrayList<Integer> given, Integer[] arr, HashSet<ArrayList<Integer>> set, ArrayList<ArrayList<Integer>> ans) {
-        // for every element, use for loop to place it at all available positions one by one
-        // after each placement, call recursion for the next
-
-        if (index == n) {
-            ArrayList<Integer> list = new ArrayList<>();
-            for (Integer i : arr) {
-                list.add(i);
-            }
-            if (!set.contains(list)) {
-                ans.add(list);
-                set.add(list);
-            }
+    public static void find(ArrayList<Integer> arr, ArrayList<Integer> current, boolean[] used, ArrayList<ArrayList<Integer>> ans) {
+        if (current.size() == arr.size()) {
+            ans.add(new ArrayList<>(current));
             return;
         }
 
-        for (int i = 0; i < n; i++){
-            int toAdd = given.get(index);
-            if (arr[i] == null) {
-                arr[i] = toAdd;
-                find(index+1, n, given, arr, set, ans);
-                arr[i] = null;
-            }
+        for (int i = 0; i < arr.size(); i++) {
+            if (used[i]) continue;
+            if (i > 0 && arr.get(i) == arr.get(i - 1) && !used[i - 1]) continue; // Skip duplicates
+
+            used[i] = true;
+            current.add(arr.get(i));
+            find(arr, current, used, ans);
+            used[i] = false;
+            current.remove(current.size() - 1);
         }
     }
 }
