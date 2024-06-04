@@ -2,8 +2,8 @@ package Easy;
 
 public class SearchInRotatedSorted {
     public static void main(String[] args) {
-        int[] arr = {7, 8, 9, 1, 2, 3, 4, 5, 6};
-        int k = 1;
+        int[] arr = {1, 2, 3, 4};
+        int k = 4;
         int ans = find(arr, k);
         System.out.println(ans);
     }
@@ -19,7 +19,7 @@ public class SearchInRotatedSorted {
         int mid = low + (high - low)/2;
 
 
-        while (high > low) {
+        while (high >= low) {
             mid = low + (high - low)/2;
 
             if (arr[mid] == k) {
@@ -27,22 +27,21 @@ public class SearchInRotatedSorted {
             }
 
             // right half sorted
-            if (arr[mid] < arr[high]) {
+            if (arr[mid] <= arr[high]) {
                 // k lies in sorted half
-                if (arr[high] > k && k > arr[mid]) {
+                if (arr[high] >= k && k >= arr[mid]) {
                     // move low to mid+1
                     low = mid+1;
-
                 // k lies in other half
                 } else {
-                    high = mid;
+                    high = mid-1;
                 }
 
             // left half sorted
-            } else if (arr[mid] > arr[low]) {
+            } else if (arr[mid] >= arr[low]) {
                 // k lies in sorted half
-                if (arr[low] < k && arr[mid] > k) {
-                    high = mid;
+                if (arr[low] <= k && arr[mid] >= k) {
+                    high = mid-1;
                 } else {
                     low = mid+1;
                 }
