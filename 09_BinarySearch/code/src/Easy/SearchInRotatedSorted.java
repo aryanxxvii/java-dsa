@@ -25,7 +25,20 @@ public class SearchInRotatedSorted {
             if (arr[mid] == k) {
                 ans = mid;
             }
-
+// check right half
+            if (arr[mid] <= arr[high]) {
+                if (k >= arr[mid] && arr[high] >= k) {
+                    low = mid+1;
+                } else {
+                    high = mid-1;
+                }
+            } else {
+                if (arr[mid] >= k && arr[low] <= k) {
+                    high = mid-1;
+                } else {
+                    low = mid+1;
+                }
+            }
             // right half sorted
             if (arr[mid] <= arr[high]) {
                 // k lies in sorted half
@@ -42,6 +55,7 @@ public class SearchInRotatedSorted {
                 // k lies in sorted half
                 if (arr[low] <= k && arr[mid] >= k) {
                     high = mid-1;
+
                 } else {
                     low = mid+1;
                 }
