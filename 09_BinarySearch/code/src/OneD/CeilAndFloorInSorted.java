@@ -1,4 +1,4 @@
-package Easy;
+package OneD;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package Easy;
+package OneD;
 
 public class CountRotations {
     // find minimum element index

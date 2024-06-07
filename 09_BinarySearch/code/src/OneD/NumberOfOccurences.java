@@ -1,4 +1,4 @@
-package Easy;
+package OneD;
 
 public class NumberOfOccurences {
     public static int count(int[] arr, int n, int x) {

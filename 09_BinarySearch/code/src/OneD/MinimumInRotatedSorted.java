@@ -1,4 +1,4 @@
-package Easy;
+package OneD;
 
 public class MinimumInRotatedSorted {
     // keep ans = int_max

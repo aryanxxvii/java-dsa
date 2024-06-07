@@ -1,4 +1,4 @@
-package Easy;
+package OneD;
 
 public class BinarySearch {
     public static int binarysearch(int arr[], int n, int k) {

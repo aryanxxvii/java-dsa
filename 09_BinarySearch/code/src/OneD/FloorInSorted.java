@@ -1,4 +1,4 @@
-package Easy;
+package OneD;
 
 public class FloorInSorted {
     public static int findFloor(long arr[], int n, long x)

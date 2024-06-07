@@ -1,4 +1,4 @@
-package Easy;
+package OneD;
 
 public class SearchInRotatedSorted {
     public static void main(String[] args) {

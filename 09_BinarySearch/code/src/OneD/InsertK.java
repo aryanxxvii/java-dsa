@@ -1,4 +1,4 @@
-package Easy;
+package OneD;
 
 public class InsertK {
     public static int searchInsertK(int Arr[], int N, int k)
