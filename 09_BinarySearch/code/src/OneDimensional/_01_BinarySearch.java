@@ -18,7 +18,7 @@ public class _01_BinarySearch {
         return -1;
     }
 
-    public static int recBinarySearch(int arr, int k, int low, int high) {
+    public static int recBinarySearch(int[] arr, int k, int low, int high) {
 
         if (low > high) {
             return -1;
