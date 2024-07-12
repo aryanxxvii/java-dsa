@@ -12,7 +12,8 @@
 
 ## 3. Hard
 1. [Majority Element 2](./Hard/MajorityElement2.java)
-2. [Pascal Triangle](./Hard/PascalTriangle.java)
-3. [Three Sum](./Hard/ThreeSum.java)
-4. [Count Inversion](./Hard/CountInversion.java)
-5. [Reverse Pairs](./Hard/ReversePairs.java)
+2. [Count Subarray XOR K](./Hard/CountSubarraysXorK.java)
+3. [Pascal Triangle](./Hard/PascalTriangle.java)
+4. [Three Sum](./Hard/ThreeSum.java)
+5. [Count Inversion](./Hard/CountInversion.java)
+6. [Reverse Pairs](./Hard/ReversePairs.java)
