@@ -4,6 +4,7 @@
 1. [Move All Zeroes To End](./Easy/MoveAllZerosToEnd.java)
 
 ## 2. Medium
+0. [Maximum Subarray Product](https://youtu.be/_71ENYohRiE?t=4556)
 1. [Next Permutation](./Medium/NextPermutation.java)
 2. [Count Subarray Sum Equals K](./Medium/CountSubarraySumK.java)
 3. [Find K Closest Elements](./Medium/KClosestElements.java)
